@@ -1,19 +1,8 @@
-/* common css */
-/* основной цвет текста #757575 */
-/* вторичный цвет текста #212121 */
-/* белый #FFFFFF */
-/* белый с прозрачностью  rgba(255, 255, 255, 0.6) */
-/* цвет кнопок при наведении акцент #2196F3 */
-/* текст фоновый доп #F5F4FA */
-/* фоновый footer + hero #2F303A */
-/* черный #000000 */
-/* color liane header ECECEC  */
-/* color liane card portfolio EEEEEE */
-
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+  --accent-color-button: #1f59ec;
   --primary-whait-color: #ffffff;
   --primary-black-color: #000000;
   --color-with-transparency: rgba(255, 255, 255, 0.6);
@@ -68,17 +57,16 @@ img {
   margin-left: auto;
   width: 1200px;
   padding: 94px 15px;
-  /* padding-top: 94px;
-  padding-right: 15px;
-  padding-bottom: 94px;
-  padding-left: 15px; */
 }
 
 /* скрывает ненужные title */
 
-.features .section-title,
-.main-portfolio .section-title {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /* section title */
@@ -117,9 +105,9 @@ img {
 }
 .button.primary:hover,
 .button.primary:focus {
-  background-color: var(--primary-whait-color);
-  color: var(--accent-color);
-  /* box-shadow: var(--primary-shadow); */
+  background-color: var(--accent-color-button);
+  color: var(--primary-whait-color);
+  box-shadow: var(--primary-shadow);
 }
 
 .button.secondary {
@@ -130,16 +118,20 @@ img {
 .button.secondary:focus {
   background-color: var(--accent-color);
   color: var(--primary-whait-color);
-  /* box-shadow: var(--primary-shadow); */
+  box-shadow: var(--primary-shadow);
 }
 
 /* header */
+
+.header {
+  border-bottom: 1px solid var(--color-liane-header);
+}
 
 .header .container {
   display: flex;
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: 1px solid var(--color-liane-header);
+
   align-items: center;
 }
 
@@ -164,15 +156,7 @@ img {
   display: flex;
   margin-left: 93px;
 }
-/* .site-nav .item {
-  margin-right: 50px;
-}
-.site-nav .item:last-child {
-  margin-right: 0px;
-} */
-/* .site-nav .item:not(:last-child) {
-  margin-right: 50px;
-} */
+
 .site-nav .item + .item {
   margin-left: 50px;
 }
